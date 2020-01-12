@@ -1,4 +1,12 @@
+body{
+    display:
+
+}
+
 footer{
-    display: block;
-    padding: 20%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    padding: 10%;
+    background-color: darkgrey;
 }
