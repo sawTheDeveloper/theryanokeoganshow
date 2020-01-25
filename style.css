@@ -1,12 +1,47 @@
 body{
-    display:
+display: grid;
+}
 
+main{
+
+    background: url(img/pan1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+
+    
+
+}
+
+.piccontainer {
+    display: grid;
+    grid-auto-flow:column;
+
+    
 }
 
 footer{
     display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
+    justify-content: center,space-between;
     padding: 5%;
     background-color: rgb(255, 255, 255);
+}
+
+.Bio{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+
+.Moretext{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+
+.footertext{
+   align-items: center;
+   position: absolute;
+   padding-top: 8%;
 }
