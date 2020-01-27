@@ -9,6 +9,12 @@ main{
     background-attachment: fixed;
 }
 
+.Mainvid{
+    display: flex;
+    justify-content: center;
+
+}
+
 .piccontainer {
     display: grid;
     grid-auto-flow:column;
