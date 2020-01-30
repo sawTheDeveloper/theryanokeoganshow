@@ -55,6 +55,11 @@ main{
 .piccontainer {
     display: grid;
     grid-auto-flow:column;
+    padding: 5%;
+}
+
+.shirtpic {
+    max-width: 50%;
 }
 
 footer{
