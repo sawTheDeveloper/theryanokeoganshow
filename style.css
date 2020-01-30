@@ -1,6 +1,38 @@
 body{
     display: grid;
     font-family: 'Roboto', sans-serif;
+
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-item {
+  float: left;
+}
+
+.nav-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-item a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: purple;
+}
+
+h1{
+    color: white;
 }
 
 main{
@@ -12,7 +44,12 @@ main{
 .Mainvid{
     display: flex;
     justify-content: center;
-
+    width: 600px;
+    margin: 5em auto;
+    padding: 2em;
+    background-color: #545454;
+    border-radius: 0.5em;
+    box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
 }
 
 .piccontainer {
@@ -21,8 +58,6 @@ main{
 }
 
 footer{
-        display: flex;
-        flex-flow: row;
         justify-content: space-evenly;
         padding: 5%;
         background-color: rgb(255, 255, 255);
@@ -48,7 +83,68 @@ footer{
 }
 
 .footertext{
-   align-items: center;
-   position: absolute;
-   padding-top: 8%;
+    justify-content: space-evenly;
+    position: absolute;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 320px;
+}
+
+.footerlogo{
+    grid-auto-flow: column;
+    max-width: 5%;
+    margin-left: 13%;
+}
+/* This is for fading in items */
+
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
 }
