@@ -54,8 +54,6 @@ main{
 }
 
 footer{
-        display: flex;
-        flex-flow: row;
         justify-content: space-evenly;
         padding: 5%;
         background-color: rgb(255, 255, 255);
@@ -81,11 +79,18 @@ footer{
 }
 
 .footertext{
-   align-items: center;
-   position: absolute;
-   padding-top: 8%;
+    justify-content: space-evenly;
+    position: absolute;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 320px;
 }
 
+.footerlogo{
+    grid-auto-flow: column;
+    max-width: 5%;
+    margin-left: 13%;
+}
 /* This is for fading in items */
 
 .fade-in {
@@ -138,3 +143,4 @@ footer{
     100% {
       opacity:1;
   }
+}
