@@ -1,0 +1,43 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "sku": "00001",
+            "title": "David Icke Was Right",
+            "description": "David Icke Was Right",
+            "available sizes": ["S", "M", "L", "XL", "XXL"],
+            "price": "10",
+            "isFreeShipping": false
+        },
+    
+        {
+            "id": 2,
+            "sku": "00002",
+            "title": "Fuck This Job and Fuck You",
+            "description": "Fuck This Job and Fuck You",
+            "available sizes": ["S", "M", "L", "XL", "XXL"],
+            "price": "10",
+            "isFreeShipping": false
+        },
+
+        {
+            "id": 3,
+            "sku": "00003",
+            "title": "Fuck Communism",
+            "description": "Fuck Communism",
+            "available sizes": ["S", "M", "L", "XL", "XXL"],
+            "price": "10",
+            "isFreeShipping": false
+        },
+
+        {
+            "id": 4,
+            "sku": "00004",
+            "title": "TROK Show Logo",
+            "description": "TROK Show Logo",
+            "available sizes": ["S", "M", "L", "XL", "XXL"],
+            "price": "10",
+            "isFreeShipping": false
+        }
+    ]
+}
