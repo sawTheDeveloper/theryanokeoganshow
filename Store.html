@@ -12,17 +12,27 @@
     <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
 </head>
 <body>
-     
 <main>
     <header>
         <img class="fade-in" src="img/webbanner.png" alt="Banner" style="width:100%;">
-        <ul class="navbar">
-            <li class="nav-item fade-in"><a href="index.html">Home</a></li>
-            <li class="nav-item fade-in"><a href="News.html">News</a></li>
-            <li class="nav-item fade-in"><a href="Podcast.html">Podcasts</a></li>
-            <li class="nav-item fade-in"><a class="active" href="Store.html">Store</a></li>
-        </ul>
-    </header>
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="News.html">News</a>
+                <a href="Podcast.html">Podcasts</a>
+                <a class="active" href="Store.html">Store</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+        </header>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+        </script>
     <h1>Store</h1>
     <div class="piccontainer">
 
