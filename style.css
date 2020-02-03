@@ -6,6 +6,7 @@ body{
 .topnav {
   overflow: hidden;
   background-color: #333;
+  opacity: 100%;
 }
 
 .topnav a {
@@ -108,6 +109,7 @@ body{
 
 h1{
     color: white;
+    text-align: center;
 }
 
 main{
@@ -174,6 +176,11 @@ footer{
     grid-auto-flow: column;
     max-width: 5%;
     margin-left: 13%;
+}
+
+.etsyshop{
+  display: flex;
+  justify-content: center;
 }
 /* This is for fading in items */
 
