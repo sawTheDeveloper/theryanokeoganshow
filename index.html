@@ -4,17 +4,19 @@
 <head>
     <title>The Ryan Okeogan Show</title>
     <meta charset="UTF-8">
-    <meta name = "keywords" content = "Podcast,Entertainment" /> 
-    <meta name = "description" content = "The Ryan Okeogan Show." /> 
+    <meta name = "keywords" content = "Podcast,Entertainment"> 
+    <meta name = "description" content = "The Ryan Okeogan Show."> 
     <meta name="author" content="Patrick Powell/Mike Huffman">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
       
-<main>
-    
+<main>   
         <header>
             <img class="fade-in" src="img/webbanner.png" alt="Banner" style="width:100%;">
             <div class="topnav" id="myTopnav">
@@ -22,11 +24,11 @@
                 <a href="News.html">News</a>
                 <a href="Podcast.html">Podcasts</a>
                 <a href="Store.html">Store</a>
-                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="topNav()">&#9776;</a>
             </div>
         </header>
         <script>
-            function myFunction() {
+            function topNav() {
               var x = document.getElementById("myTopnav");
               if (x.className === "topnav") {
                 x.className += " responsive";
@@ -34,7 +36,53 @@
                 x.className = "topnav";
               }
             }
-        </script>     
+        </script>
+      <div class="container-fluid"> 
+        <div class="row">
+          <div class="flex-box">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+      
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" width="100%" height="345" src="https://www.youtube.com/embed/5w4vMbpBpoo">
+          </iframe>
+                </div>
+      
+                <div class="item embed-responsive embed-responsive-16by9">
+                 <iframe class="embed-responsive-item" width="100%" height="345" src="https://www.youtube.com/embed/6m1xsM6no8U">
+          </iframe>
+                </div>
+      
+                <div class="item embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" width="100%" height="345" src="https://www.youtube.com/embed/G8zSM84XygA">
+          </iframe>
+                </div>
+              </div>
+      
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+           
+            <div id="desc" style="background-color: #4CAF50; color: white;">
+              <h3>Recent Videos</h3>
+            </div>
+          </div>
+        </div>
+      </div>     
 </main>
  <footer>
  
