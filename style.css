@@ -175,7 +175,7 @@ footer{
 .footerlogo{
     grid-auto-flow: column;
     max-width: 5%;
-    margin-left: 13%;
+    margin-left: 12%;
     padding-bottom: 5%;
 }
 
