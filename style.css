@@ -14,9 +14,10 @@ body{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 4px 16px;
   text-decoration: none;
   font-size: 17px;
+  text-shadow: 1px 1px #000000;
 }
 
 .active {
@@ -34,7 +35,7 @@ body{
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;    
+  font-size: 15px;    
   border: none;
   outline: none;
   color: white;
@@ -226,6 +227,7 @@ body{
  background: none repeat scroll 0 0 #4CAF50;
   bottom: 0;
   font-size: 12px;
+  text-shadow: 1px 1px #000000;
   text-align: center;
   opacity: 1;
   padding:7px 30px 7px;
@@ -307,6 +309,7 @@ footer{
     text-align: center;
     margin-right: 50px;
     margin-left: 50px;
+    text-shadow: 2px 2px #000000;
 }
 
 .Moretext{
@@ -316,6 +319,7 @@ footer{
     text-align: center;
     margin-right: 50px;
     margin-left: 50px;
+    text-shadow: 2px 2px #000000;
 }
 
 @media screen and (min-width: 768px) {
