@@ -107,6 +107,25 @@ body{
   }
 }
 
+#logo {
+  max-width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation: anim 5s infinite linear;
+  animation: anim 5s infinite linear;
+}
+
+@-webkit-keyframes anim {
+  from {-webkit-transform: rotateY(0deg);}
+  to {-webkit-transform: rotateY(360deg);}
+}
+
+@keyframes anim {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+
 .youtube-carousel{
   border: 4px solid #4CAF50;
 }
