@@ -8,13 +8,13 @@
     <meta name = "description" content = "The Ryan Okeogan Show."> 
     <meta name="author" content="Patrick Powell/Mike Huffman">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/TROKshow-logotransparent.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Arbutus' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script data-ad-client="ca-pub-1831492306342250" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script type='text/javascript' src='js/ytvidcarousel.js'></script>
 </head>
 <body>
       
@@ -38,8 +38,89 @@
               }
             }
         </script>
-        <img id="logo" src="img/TROKshow-logotransparent.png">
+        <img id="logo" src="img/TROKshow-logoblack.png">
         <div class="container">
+        <script>
+          //Start Youtube API
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var youtubeReady = false;
+
+//Variable for the dynamically created youtube players
+var players= new Array();
+var isPlaying = false;
+function onYouTubeIframeAPIReady(){
+  //The id of the iframe and is the same as the videoId	
+  jQuery(".youtube-video").each(function(i, obj)  {
+     players[obj.id] = new YT.Player(obj.id, {         
+			  videoId: obj.id,
+			    playerVars: {
+			    controls: 2,
+		      rel:0,
+		      autohide:1,
+		      showinfo: 0 ,
+		      modestbranding: 1,
+		      wmode: "transparent",
+		      html5: 1
+       	},    
+        events: {
+          'onStateChange': onPlayerStateChange
+        }
+       });
+     });
+     youtubeReady = true;
+  }
+
+
+function onPlayerStateChange(event) {
+  var target_control =  jQuery(event.target.getIframe()).parent().parent().parent().find(".controls");
+  
+  var target_caption = jQuery(event.target.getIframe()).parent().find(".carousel-caption");
+  switch(event.data){
+    case -1:
+      jQuery(target_control).fadeIn(500);
+      jQuery(target_control).children().unbind('click');
+      break
+     case 0:
+      jQuery(target_control).fadeIn(500);
+      jQuery(target_control).children().unbind('click');
+      break;
+     case 1:
+      jQuery(target_control).children().click(function () {return false;});
+      jQuery(target_caption).fadeOut(500);
+      jQuery(target_control).fadeOut(500);
+       break;
+      case 2:
+        jQuery(target_control).fadeIn(500);
+        jQuery(target_control).children().unbind('click'); 
+        break;
+        case 3:
+           jQuery(target_control).children().click(function () {return false;});
+           jQuery(target_caption).fadeOut(500);
+           jQuery(target_control).fadeOut(500);
+           break;
+          case 5:
+            jQuery(target_control).children().click(function () {return false;});
+            jQuery(target_caption).fadeOut(500);
+            jQuery(target_control).fadeOut(500);
+            break;
+          default:
+            break;
+    }
+};
+
+jQuery(window).bind('load', function(){
+  jQuery(".carousel-caption").fadeIn(500);
+  jQuery(".controls").fadeIn(500);
+ });
+
+jQuery('.carousel').bind('slid.bs.carousel', function (event) {
+   jQuery(".controls").fadeIn(500);
+});
+        </script>
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
               <div id="random_number1" class="carousel slide youtube-carousel"  data-ride="carousel" data-interval="false">
@@ -89,7 +170,7 @@
 </main>
  <footer>
  
-    <a href="https://www.youtube.com/channel/UC-uRII4h6VY9pEbxJmN0Few/featured" target="_blank"><img class = "footerlogo" src="img/YouTube.png"></a>
+    <a href="https://www.youtube.com/channel/UC-uRII4h6VY9pEbxJmN0Few/featured" target="_blank"><img class = "footerlogo" src="img/youtube.png"></a>
 
     <a href="https://www.instagram.com/the_ryan_okeogan_show/" target="_blank"><img class = "footerlogo" src="img/instagram.png"></a>
 
